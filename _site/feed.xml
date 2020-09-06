@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal blog, Write-ups. Maintained by Arjun V</title>
+    <description>Developer | Cyber-security | Programmer | Open-source lover</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 25 Aug 2018 12:43:56 +0530</pubDate>
+    <lastBuildDate>Sat, 25 Aug 2018 12:43:56 +0530</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Adding a custom domain and configuring https on a GitHub page</title>
+        <description>&lt;p&gt;HTTPS helps prevent intruders from tampering with the communications between your websites and your users’ browsers. Intruders include intentionally malicious attackers, and legitimate but intrusive companies, such as ISPs or hotels that inject ads into pages.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-setting-up-a-github-page&quot;&gt;1. Setting up a GitHub page&lt;/h3&gt;
+&lt;p&gt;Hope you have a GitHub account(not offending), if not create one, its free!!. So firstly you should create a GitHub page.&lt;/p&gt;
+
+&lt;p&gt;A GitHub page is similar to a webpage only Github page will be static and we won’t have trouble setting it up on a server as Github is already providing that service on GitHub.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;So first thing is to create a repository on GitHub.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-1.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add the repository name(name should be followed with ”.github.io”, here, in this case, it would be demosite.github.io), description for the repository, preference such as public or private(whether you want the repository to be public or private), any initialization file(if needed) such as README.md(markdown GitHub view page) or .gitignore(for ignoring important files that should not be exposed to the public). Then click “Create repository”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-2.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding details to the repository.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Next step is to create a copy of the repository on to your computer. For that, we have a couple of options, but we will be focusing on the first one as it is far more simple.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Before cloning(copying the repository from GitHub to your machine  is called as cloning), we need to set up our local environment for git(preinstalled on Linux, use Gitbash for windows), so for that, you should run two commands.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ git config –global user.name “&amp;lt;your-user-name&amp;gt;”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ git config –global user.email “&amp;lt;your-email&amp;gt;”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Once this is done just copy the link that is highlighted https(on GitHub) and go to your terminal or command prompt on your computer and then type the command and paste the URL.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ git clone https://github.com\/&amp;lt;your-user-name&amp;gt;/&amp;lt;your-repository-name&amp;gt;.git&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This will create a repository on your local machine. Once this is done you can add the HTML, js, CSS, and all the files to this repository that is needed for your webpage.&lt;/p&gt;
+
+&lt;p&gt;Then you need to push it by adding, committing the changes and pushing it to the GitHub repository. Well, there are certain commands for that, and I think I will skip this. You can go through the given &lt;a href=&quot;https://gist.github.com/Kerry350/2043530&quot; title=&quot;Link&quot;&gt;Link&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Then you will be able to view the files on your local machine on your GitHub repository. And you will be able to see your GitHub page by typing the name of the GitHub repository(demosite.github.io in this case) on the search bar, you will be able to view the webpage.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;2buying-the-domain-name&quot;&gt;2.  Buying the Domain name.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;So after that, we need to buy a domain for changing demosite.github.io to our custom domain i.e. demosite.com or demosite.org or demosite.net etc. So for that, we will be using a website called &lt;a href=&quot;https://www.namecheap.com/&quot; title=&quot;Namecheap website&quot;&gt;Namecheap&lt;/a&gt;. Namecheap, Inc. is an ICANN-accredited registrar, which provide services on domain name registration and offer for sale domain names that are registered to third parties. It is also a web hosting company, based in Phoenix, Arizona(from Wikipedia). So you can buy your desired domain name just by searching for it and you have to pay for it(except for students using &lt;a href=&quot;https://education.github.com/pack&quot; title=&quot;GitHub students pack&quot;&gt;GitHub students pack&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-3.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After registering and buying a domain you can go to your GitHub repository. And then create a file called CNAME(all letters should be capital). Then add your registered domain name into it by editing CNAME and then commit the changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-4.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You will end up with something like this with some other domain name. Don’t add anything else other than the domain name as GitHub will show errors in the upcoming steps.&lt;/li&gt;
+  &lt;li&gt;Next will be adding configuring the repository settings for adding the domain name to the GitHub page.
+For that go into settings in the repository that you are working on. Then in the first page i.e. “option”, scroll down until you see “GitHub pages”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-4.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then click the drop-down menu from the source which says “none” and selects “master branch”. We will be using the master branch as our code is pushed into the master branch. Then click save button, and you will be able to see a success message showing that “Your site is already published on &amp;lt;url&amp;gt;”, so if you want to check whether the pages are working, click on that URL and it will be redirected to your GitHub page. Now we can move forward onto adding the custom domain name to our github.io page.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For adding the custom domain, in the same settings page and under GitHub Pages section, you will be able to find a new option with a text box called “Custom domain”. In it, you need to add the domain name that you gave in the CNAME. The domain name from CNAME should match the custom domain name otherwise it will show an error. Then click save. You will be able to find a success message under the GitHub Pages with the active custom domain name you have entered. You can click on the link and see if the page gets loaded up. If not then wait for 24hrs for the domain to get activated(in some rare case).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;3-adding-the-ssl-certificate-to-the-domain-name&quot;&gt;3. Adding the SSL certificate to the domain name.&lt;/h3&gt;
+&lt;p&gt;Now for adding the SSL certificate, you need to get the certificate from Namecheap itself as they provide SSL too. So firstly you need to buy the SSL from Security-&amp;gt;SSL Certificate from Namecheap. You can select any SSL pack depending upon your budget but I would suggest buying from any of the top 3 as it is better for single page webpages.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-5.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you buy it you will be able to see it on your dashboard in the Product List. And you will be able to see your domain name in your Dashboard in the Domain List. Or if you want to see them all together just go to Dashboard only.&lt;/p&gt;
+
+&lt;p&gt;In the product section you will find icons and if you hover your mouse over it you will find the expiry date, status etc. about your domain name and SSL.&lt;/p&gt;
+
+&lt;p&gt;Now before activating the SSL, we need to buy a private email for the site. This can also be done in Namecheap. For that go to the Hosting menu on the navigation bar and select Private Email Hosting. The reason why we need a private email is that the SSL certificate, as well as the verification for SSL, will be sent only to the private email. So Click on the option and Buy a private mail for personal use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-6.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;After adding the details you should choose the mail admin@&amp;lt;domainame&amp;gt; i.e. in my case “admin@demosite.com”. This is because the SSL certificate will be sent to admin@&lt;domainname&gt;. Once you buy it you need to set the password. For that go into Dashboard then click the arrow button from the centre and select Private mail.  For that go into the dashboard and into the &quot;manage&quot; from the drop-down menu from the Private Email section. Then you should see whether the portion with Catch-All Mailbox is selected as admin@\&lt;domainname&gt; then you will be able to see Mailboxes in use under that. From that menu in the right side, you will be able to see another dropdown list. Select it and you will be able to find an option called change password Then change the password. After that, you can select &quot;Open webmail&quot; from the same dropdown list to access the private mail. Keep it open as it will be handy during the SSL activation.&lt;/domainname&gt;&lt;/domainname&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now you need to activate the SSL. For that, you should go to Dashboard again. Then select Activate from SSL.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-7.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For activating you need to get CSR  from &lt;a href=&quot;https://decoder.link/csr_generator&quot; title=&quot;CSR Generator link&quot;&gt;CSR Generator&lt;/a&gt;. Add the necessary details and you will get the Keys. There will be three keys. Use extreme precaution while copying the CSR key, Private key,  and Certificate key. Store it in a safe place as text form. Then copy the CSR key and paste it into the CSR field.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-8.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click next, and choose Any other Server from the list.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-9.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;On the next page, click DCV method to EMAIL.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is better because we are hosting our website on GitHub and not on a server so EMAIL is enough.&lt;/p&gt;
+
+&lt;p&gt;Add your configured admin@&amp;lt;domainname&amp;gt; here from the dropdown list. This is the reason why we chose admin mail id in the previous section.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-10.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then add the company details. The mail should be the one where you want to receive the SSL from.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-11.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then you need to add the details for the form.
+And after that, you can submit the form and a confirmation will be received.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once done you will receive the mail.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;So you have the SSL activated.&lt;/li&gt;
+  &lt;li&gt;Now you need to configure it with IP’s of GitHub to be able to access it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4configuring-domain-name-to-work-on-github-with-ssl&quot;&gt;4. Configuring Domain name to work on GitHub with SSL.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;So firstly you need to go to Dashboard on Namecheap.&lt;/li&gt;
+  &lt;li&gt;Then go to Domain List&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-12.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then click on manage button on right side of your domain name.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-13.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click Advanced DNS from the top navigation menu and click Add New Record.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Then go to &lt;a href=&quot;https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider&quot; title=&quot;Apex domain link&quot;&gt;Apex domain&lt;/a&gt; (IP might change over time, so do check for the latest one)and copy the IP provided. i.e. 4 to be exact.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add it just like the one provided.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-14.png&quot; alt=&quot;Main Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After adding the four IP, you should add another record called as CNAME. The CNAME should have a host www, and value should be your GitHub page URL i.e. in my case demosite.github.io or nctesting.github.io&lt;/li&gt;
+  &lt;li&gt;After that save the changes.&lt;/li&gt;
+  &lt;li&gt;Now remove the parking.namecheap.com record. This is because there will be a conflict between the CNAME so we only need our GitHub CNAME. so delete the other CNAME.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you have done these steps you will be able to access the https domain name rather than HTTP.  The SSL activation might take some time up to 24 hours, so it is advisable to wait before making any changes to the webpage.&lt;/p&gt;
+
+&lt;p&gt;Well!!, that’s a long way to go so I hope this blog is useful for some who followed along. This is just a simple thing that I did during some free time.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h3&gt;
+
+&lt;p&gt;You might face certain problems on the way. Even I have encountered tons of problems and I was able to find a way out of it so please try to find a way by googling the problems as they may be fixed already by others. Hope this helped.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Links  for reference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot; title=&quot;GitHub Help link&quot;&gt;GitHub Help&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages&quot; title=&quot;Namecheap Help link&quot;&gt;Namecheap Help&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you!!  :+1:&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Aug 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/blog/2018/08/18/adding-a-custom-domain-and-configuring-https-on-github-page.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/08/18/adding-a-custom-domain-and-configuring-https-on-github-page.html</guid>
+        
+        
+        <category>Blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<link rel="icon" href="/assets/images/logo.png">
+    
+<title>Adding a custom domain and configuring https on a GitHub page | Arjun V</title>
+    
+ 
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+    
+<link href="/assets/css/main.css" rel="stylesheet">
+    
+</head>
+    
+
+    
+
+<body class="layout-post">
+
+    
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    
+    <div class="container pr-0">    
+    
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Arjun V">
+    </a>
+    <!-- End Logo -->
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+       
+        <!-- Begin Menu -->
+        
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="https://arjunvijayanathakurup.me">Home</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/">Blog</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/about">About</a>
+                </li>
+                
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://twitter.com/imarjun_v"><i class="fab fa-twitter"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="https://github.com/imarjunv"><i class="fab fa-github"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="mailto:v.arjun@protonmail.com"><i class="fa fa-envelope"></i></a>
+                </li>
+                
+            </ul>		
+  
+        <!-- End Menu -->
+
+    </div>
+        
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+    
+<div class="site-content">   
+<div class="container">
+    
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Arjun V</h1>
+    <p class="lead">
+         Developer | Cyber-security | Programmer | Open-source lover
+    </p>
+</div>
+
+    
+    
+<!-- Content
+================================================== --> 
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+	<div class="row">
+
+		<!-- Post Share -->
+		<div class="col-md-2 pl-0">            
+           <div class="share">
+    <p>
+        Share  <i class="fa fa-share"></i>
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Adding%20a%20custom%20domain%20and%20configuring%20https%20on%20a%20GitHub%20page&amp;url=http://localhost:4000/blog/2018/08/18/adding-a-custom-domain-and-configuring-https-on-github-page.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="fab fa-twitter"></i>
+        </a>
+        </li>
+        
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/2018/08/18/adding-a-custom-domain-and-configuring-https-on-github-page.html" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        </li>
+        
+        <li class="m1-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/blog/2018/08/18/adding-a-custom-domain-and-configuring-https-on-github-page.html" onclick="window.open(this.href, 'facebook-google', 'width=550,height=435');return false;">
+            <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+        
+    </ul>
+    <div class="sep">
+    </div>				
+    <ul>
+        <li> 
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+</div>  
+		</div>
+		
+
+		<!-- Post -->        
+        
+        
+		<div class="col-md-9 flex-first flex-md-unordered">
+			<div class="mainheading">
+
+                <!-- Author Box -->
+                				
+				<div class="row post-top-meta">
+					<div class="col-md-10">
+						<a target="_blank" class="link-dark" href="https://arjunvijayanathakurup.me">Arjun V</a><a target="_blank" href="https://twitter.com/imarjun_v" class="btn follow">Follow</a>
+						<br>
+                        <span class="author-description">Developer | Cyber-security enthusiast | Love opensource</span>						
+					</div>
+				</div>				
+                
+                
+                <!-- Post Title -->
+				<h1 class="posttitle">Adding a custom domain and configuring https on a GitHub page</h1> 
+                
+			</div>
+
+			<!-- Post Featured Image -->
+			<img class="featured-image img-fluid" src="/assets/images/blog-6.png" alt="Adding a custom domain and configuring https on a GitHub page">
+			<!-- End Featured Image -->
+
+			<!-- Post Content -->
+			<div class="article-post">
+				<p>HTTPS helps prevent intruders from tampering with the communications between your websites and your users’ browsers. Intruders include intentionally malicious attackers, and legitimate but intrusive companies, such as ISPs or hotels that inject ads into pages.</p>
+
+<h3 id="1-setting-up-a-github-page">1. Setting up a GitHub page</h3>
+<p>Hope you have a GitHub account(not offending), if not create one, its free!!. So firstly you should create a GitHub page.</p>
+
+<p>A GitHub page is similar to a webpage only Github page will be static and we won’t have trouble setting it up on a server as Github is already providing that service on GitHub.</p>
+
+<ul>
+  <li>So first thing is to create a repository on GitHub.</li>
+</ul>
+
+<p><img src="/assets/images/blog-1.png" alt="Main Image"></p>
+
+<ul>
+  <li>Add the repository name(name should be followed with ”.github.io”, here, in this case, it would be demosite.github.io), description for the repository, preference such as public or private(whether you want the repository to be public or private), any initialization file(if needed) such as README.md(markdown GitHub view page) or .gitignore(for ignoring important files that should not be exposed to the public). Then click “Create repository”.</li>
+</ul>
+
+<p><img src="/assets/images/blog-2.png" alt="Main Image"></p>
+
+<p>Adding details to the repository.</p>
+<ul>
+  <li>Next step is to create a copy of the repository on to your computer. For that, we have a couple of options, but we will be focusing on the first one as it is far more simple.</li>
+</ul>
+
+<p>Before cloning(copying the repository from GitHub to your machine  is called as cloning), we need to set up our local environment for git(preinstalled on Linux, use Gitbash for windows), so for that, you should run two commands.</p>
+
+<hr>
+<blockquote>
+  <p>$ git config –global user.name “&lt;your-user-name&gt;”</p>
+</blockquote>
+
+<blockquote>
+  <p>$ git config –global user.email “&lt;your-email&gt;”</p>
+</blockquote>
+
+<hr>
+
+<p>Once this is done just copy the link that is highlighted https(on GitHub) and go to your terminal or command prompt on your computer and then type the command and paste the URL.</p>
+
+<hr>
+<blockquote>
+  <p>$ git clone https://github.com\/&lt;your-user-name&gt;/&lt;your-repository-name&gt;.git</p>
+</blockquote>
+
+<hr>
+
+<p>This will create a repository on your local machine. Once this is done you can add the HTML, js, CSS, and all the files to this repository that is needed for your webpage.</p>
+
+<p>Then you need to push it by adding, committing the changes and pushing it to the GitHub repository. Well, there are certain commands for that, and I think I will skip this. You can go through the given <a href="https://gist.github.com/Kerry350/2043530" title="Link">Link</a> .</p>
+
+<p>Then you will be able to view the files on your local machine on your GitHub repository. And you will be able to see your GitHub page by typing the name of the GitHub repository(demosite.github.io in this case) on the search bar, you will be able to view the webpage.</p>
+
+<hr>
+<h3 id="2buying-the-domain-name">2.  Buying the Domain name.</h3>
+<ul>
+  <li>So after that, we need to buy a domain for changing demosite.github.io to our custom domain i.e. demosite.com or demosite.org or demosite.net etc. So for that, we will be using a website called <a href="https://www.namecheap.com/" title="Namecheap website">Namecheap</a>. Namecheap, Inc. is an ICANN-accredited registrar, which provide services on domain name registration and offer for sale domain names that are registered to third parties. It is also a web hosting company, based in Phoenix, Arizona(from Wikipedia). So you can buy your desired domain name just by searching for it and you have to pay for it(except for students using <a href="https://education.github.com/pack" title="GitHub students pack">GitHub students pack</a>).</li>
+</ul>
+
+<p><img src="/assets/images/blog-3.png" alt="Main Image"></p>
+
+<ul>
+  <li>After registering and buying a domain you can go to your GitHub repository. And then create a file called CNAME(all letters should be capital). Then add your registered domain name into it by editing CNAME and then commit the changes.</li>
+</ul>
+
+<p><img src="/assets/images/blog-4.png" alt="Main Image"></p>
+
+<ul>
+  <li>You will end up with something like this with some other domain name. Don’t add anything else other than the domain name as GitHub will show errors in the upcoming steps.</li>
+  <li>Next will be adding configuring the repository settings for adding the domain name to the GitHub page.
+For that go into settings in the repository that you are working on. Then in the first page i.e. “option”, scroll down until you see “GitHub pages”.</li>
+</ul>
+
+<p><img src="/assets/images/blog-4.png" alt="Main Image"></p>
+
+<p>Then click the drop-down menu from the source which says “none” and selects “master branch”. We will be using the master branch as our code is pushed into the master branch. Then click save button, and you will be able to see a success message showing that “Your site is already published on &lt;url&gt;”, so if you want to check whether the pages are working, click on that URL and it will be redirected to your GitHub page. Now we can move forward onto adding the custom domain name to our github.io page.</p>
+
+<ul>
+  <li>For adding the custom domain, in the same settings page and under GitHub Pages section, you will be able to find a new option with a text box called “Custom domain”. In it, you need to add the domain name that you gave in the CNAME. The domain name from CNAME should match the custom domain name otherwise it will show an error. Then click save. You will be able to find a success message under the GitHub Pages with the active custom domain name you have entered. You can click on the link and see if the page gets loaded up. If not then wait for 24hrs for the domain to get activated(in some rare case).</li>
+</ul>
+
+<hr>
+<h3 id="3-adding-the-ssl-certificate-to-the-domain-name">3. Adding the SSL certificate to the domain name.</h3>
+<p>Now for adding the SSL certificate, you need to get the certificate from Namecheap itself as they provide SSL too. So firstly you need to buy the SSL from Security-&gt;SSL Certificate from Namecheap. You can select any SSL pack depending upon your budget but I would suggest buying from any of the top 3 as it is better for single page webpages.</p>
+
+<p><img src="/assets/images/blog-5.png" alt="Main Image"></p>
+
+<p>Once you buy it you will be able to see it on your dashboard in the Product List. And you will be able to see your domain name in your Dashboard in the Domain List. Or if you want to see them all together just go to Dashboard only.</p>
+
+<p>In the product section you will find icons and if you hover your mouse over it you will find the expiry date, status etc. about your domain name and SSL.</p>
+
+<p>Now before activating the SSL, we need to buy a private email for the site. This can also be done in Namecheap. For that go to the Hosting menu on the navigation bar and select Private Email Hosting. The reason why we need a private email is that the SSL certificate, as well as the verification for SSL, will be sent only to the private email. So Click on the option and Buy a private mail for personal use.</p>
+
+<p><img src="/assets/images/blog-6.png" alt="Main Image"></p>
+
+<ul>
+  <li>
+    <p>After adding the details you should choose the mail admin@&lt;domainame&gt; i.e. in my case “admin@demosite.com”. This is because the SSL certificate will be sent to admin@<domainname>. Once you buy it you need to set the password. For that go into Dashboard then click the arrow button from the centre and select Private mail.  For that go into the dashboard and into the "manage" from the drop-down menu from the Private Email section. Then you should see whether the portion with Catch-All Mailbox is selected as admin@\<domainname> then you will be able to see Mailboxes in use under that. From that menu in the right side, you will be able to see another dropdown list. Select it and you will be able to find an option called change password Then change the password. After that, you can select "Open webmail" from the same dropdown list to access the private mail. Keep it open as it will be handy during the SSL activation.</domainname></domainname></p>
+  </li>
+  <li>
+    <p>Now you need to activate the SSL. For that, you should go to Dashboard again. Then select Activate from SSL.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/blog-7.png" alt="Main Image"></p>
+
+<ul>
+  <li>For activating you need to get CSR  from <a href="https://decoder.link/csr_generator" title="CSR Generator link">CSR Generator</a>. Add the necessary details and you will get the Keys. There will be three keys. Use extreme precaution while copying the CSR key, Private key,  and Certificate key. Store it in a safe place as text form. Then copy the CSR key and paste it into the CSR field.</li>
+</ul>
+
+<p><img src="/assets/images/blog-8.png" alt="Main Image"></p>
+
+<ul>
+  <li>Click next, and choose Any other Server from the list.</li>
+</ul>
+
+<p><img src="/assets/images/blog-9.png" alt="Main Image"></p>
+
+<ul>
+  <li>On the next page, click DCV method to EMAIL.</li>
+</ul>
+
+<p>This is better because we are hosting our website on GitHub and not on a server so EMAIL is enough.</p>
+
+<p>Add your configured admin@&lt;domainname&gt; here from the dropdown list. This is the reason why we chose admin mail id in the previous section.</p>
+
+<p><img src="/assets/images/blog-10.png" alt="Main Image"></p>
+
+<ul>
+  <li>Then add the company details. The mail should be the one where you want to receive the SSL from.</li>
+</ul>
+
+<p><img src="/assets/images/blog-11.png" alt="Main Image"></p>
+
+<ul>
+  <li>Then you need to add the details for the form.
+And after that, you can submit the form and a confirmation will be received.</li>
+</ul>
+
+<p>Once done you will receive the mail.</p>
+
+<ul>
+  <li>So you have the SSL activated.</li>
+  <li>Now you need to configure it with IP’s of GitHub to be able to access it.</li>
+</ul>
+
+<h3 id="4configuring-domain-name-to-work-on-github-with-ssl">4. Configuring Domain name to work on GitHub with SSL.</h3>
+
+<ul>
+  <li>So firstly you need to go to Dashboard on Namecheap.</li>
+  <li>Then go to Domain List</li>
+</ul>
+
+<p><img src="/assets/images/blog-12.png" alt="Main Image"></p>
+
+<ul>
+  <li>Then click on manage button on right side of your domain name.</li>
+</ul>
+
+<p><img src="/assets/images/blog-13.png" alt="Main Image"></p>
+
+<ul>
+  <li>
+    <p>Click Advanced DNS from the top navigation menu and click Add New Record.</p>
+  </li>
+  <li>
+    <p>Then go to <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" title="Apex domain link">Apex domain</a> (IP might change over time, so do check for the latest one)and copy the IP provided. i.e. 4 to be exact.</p>
+  </li>
+  <li>
+    <p>Add it just like the one provided.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/blog-14.png" alt="Main Image"></p>
+
+<ul>
+  <li>After adding the four IP, you should add another record called as CNAME. The CNAME should have a host www, and value should be your GitHub page URL i.e. in my case demosite.github.io or nctesting.github.io</li>
+  <li>After that save the changes.</li>
+  <li>Now remove the parking.namecheap.com record. This is because there will be a conflict between the CNAME so we only need our GitHub CNAME. so delete the other CNAME.</li>
+</ul>
+
+<p>Once you have done these steps you will be able to access the https domain name rather than HTTP.  The SSL activation might take some time up to 24 hours, so it is advisable to wait before making any changes to the webpage.</p>
+
+<p>Well!!, that’s a long way to go so I hope this blog is useful for some who followed along. This is just a simple thing that I did during some free time.</p>
+
+<hr>
+<h3 id="disclaimer">Disclaimer</h3>
+
+<p>You might face certain problems on the way. Even I have encountered tons of problems and I was able to find a way out of it so please try to find a way by googling the problems as they may be fixed already by others. Hope this helped.</p>
+
+<hr>
+<p><strong>Links  for reference</strong></p>
+
+<p><a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" title="GitHub Help link">GitHub Help</a></p>
+
+<p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages" title="Namecheap Help link">Namecheap Help</a></p>
+
+<p>Thank you!!  <img class="emoji" title=":+1:" alt=":+1:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+
+			</div>
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2018-08-18">18 Aug 2018</time></span>           
+                
+                </small>
+            </p>
+            
+			<!-- Post Categories -->
+			<div class="after-post-tags">
+				<ul class="tags">
+                    
+                    
+                    <li>
+                     <a href="/category/blog/">Blog</a>
+                    </li>
+                    
+				</ul>
+			</div>
+			<!-- End Categories -->
+            
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span><img src="/assets/images/logo.png" alt="Personal blog, Write-ups. Maintained by Arjun V">   Never miss a <b>story</b> from us, subscribe to our newsletter</span>
+        <form action="" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
+            <div class="mc-field-group">
+            <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
+            <input type="submit" value="Subscribe" name="subscribe" class="heart">
+            </div>
+        </form>
+	</div>
+</div>    
+    
+</div>
+<!-- /.container>
+    
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                 Copyright © 2018 Arjun V 
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+   
+</div> <!-- /.site-content>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+    
+<script src="/assets/js/jquery.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+<script src="/assets/js/mediumish.js"></script>
+     
+</body>
+</html>

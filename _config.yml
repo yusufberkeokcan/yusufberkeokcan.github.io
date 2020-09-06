@@ -1,0 +1,42 @@
+# Site
+name: "abc"
+description: "Lorem Ipsum"
+title: "Mimimalist theme for developers who love to blog"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: "/blog"
+
+
+# Authors
+author:
+  arjun:
+    name: abc
+    display_name: abc
+    propic: assets/images/propic.png
+    email: abc@xyz.com
+    web: https://abc.com
+    twitter: https://twitter.com/abc
+    description: "Lorem Ipsum"
+
+
+# Plugins
+plugins: 
+  - jekyll-paginate
+  - jekyll-archives
+  - jemoji
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: mainarchive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+highlighter: rouge

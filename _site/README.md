@@ -1,0 +1,1 @@
+Personal Blog developed using Jekyll. Minimalistic theme mediumish with customization
